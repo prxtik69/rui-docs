@@ -97,7 +97,7 @@ export default function Home() {
             <div className="bg-background rounded-lg border p-6 shadow-sm">
               <pre className="text-sm overflow-x-auto">
                 <code className="text-slate-800 dark:text-slate-200">{`// Simple variable declaration
-suppose name = Alice
+suppose name = "Alice"
 suppose age = 25
 
 // Easy function definition
