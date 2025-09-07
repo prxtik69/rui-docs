@@ -85,19 +85,7 @@ if (age >= 18) {
 }`}
             </CodeBlock>
 
-            <DocsHeading level={2}>IntelliSense</DocsHeading>
 
-            <DocsParagraph>
-                The extension provides auto-completion for:
-            </DocsParagraph>
-
-            <DocsList>
-                <DocsListItem><DocsStrong>Keywords</DocsStrong>: <InlineCode>define</InlineCode>, <InlineCode>suppose</InlineCode>, <InlineCode>until</InlineCode>, <InlineCode>if</InlineCode>, <InlineCode>else</InlineCode>, <InlineCode>return</InlineCode>, <InlineCode>write</InlineCode></DocsListItem>
-                <DocsListItem><DocsStrong>Built-in functions</DocsStrong>: <InlineCode>write()</InlineCode></DocsListItem>
-                <DocsListItem><DocsStrong>Booleans</DocsStrong>: <InlineCode>true</InlineCode>, <InlineCode>false</InlineCode></DocsListItem>
-                <DocsListItem><DocsStrong>Operators</DocsStrong>: <InlineCode>+</InlineCode>, <InlineCode>-</InlineCode>, <InlineCode>*</InlineCode>, <InlineCode>/</InlineCode>, <InlineCode>==</InlineCode>, <InlineCode>!=</InlineCode>, <InlineCode>{'>'}</InlineCode>, <InlineCode>{'<'}</InlineCode></DocsListItem>
-                <DocsListItem><DocsStrong>Logical operators</DocsStrong>: <InlineCode>and</InlineCode>, <InlineCode>or</InlineCode>, <InlineCode>not</InlineCode></DocsListItem>
-            </DocsList>
 
             <DocsHeading level={2}>Code Snippets</DocsHeading>
 
@@ -153,59 +141,7 @@ if (age >= 18) {
 }  // Error highlighted here`}
             </CodeBlock>
 
-            <DocsHeading level={2}>Code Formatting</DocsHeading>
 
-            <DocsParagraph>
-                Format your Rui code automatically:
-            </DocsParagraph>
-
-            <DocsList ordered>
-                <DocsListItem>Right-click in the editor</DocsListItem>
-                <DocsListItem>Select &quot;Format Document&quot; or use Shift+Alt+F (Windows/Linux) or Shift+Option+F (Mac)</DocsListItem>
-            </DocsList>
-
-            <DocsHeading level={2}>File Associations</DocsHeading>
-
-            <DocsParagraph>
-                The extension automatically associates <InlineCode>.rui</InlineCode> files with the Rui language mode. You can also manually set the language mode:
-            </DocsParagraph>
-
-            <DocsList ordered>
-                <DocsListItem>Open a <InlineCode>.rui</InlineCode> file</DocsListItem>
-                <DocsListItem>Click on the language mode in the status bar</DocsListItem>
-                <DocsListItem>Select &quot;Rui&quot; from the list</DocsListItem>
-            </DocsList>
-
-            <DocsHeading level={2}>Settings</DocsHeading>
-
-            <DocsParagraph>
-                You can customize the extension behavior in VS Code settings:
-            </DocsParagraph>
-
-            <DocsList ordered>
-                <DocsListItem>Open Settings (Ctrl+, or Cmd+,)</DocsListItem>
-                <DocsListItem>Search for &quot;Rui&quot;</DocsListItem>
-                <DocsListItem>Adjust the following options:</DocsListItem>
-            </DocsList>
-
-            <DocsList>
-                <DocsListItem><DocsStrong>Rui: Enable IntelliSense</DocsStrong>: Enable/disable auto-completion</DocsListItem>
-                <DocsListItem><DocsStrong>Rui: Enable Error Detection</DocsStrong>: Enable/disable syntax error highlighting</DocsListItem>
-                <DocsListItem><DocsStrong>Rui: Format On Save</DocsStrong>: Automatically format code when saving</DocsListItem>
-            </DocsList>
-
-            <DocsHeading level={2}>Keyboard Shortcuts</DocsHeading>
-
-            <DocsParagraph>
-                The extension provides these keyboard shortcuts:
-            </DocsParagraph>
-
-            <DocsList>
-                <DocsListItem><DocsStrong>Ctrl+Shift+P</DocsStrong> (Cmd+Shift+P): Open Command Palette</DocsListItem>
-                <DocsListItem><DocsStrong>F1</DocsStrong>: Show all commands</DocsListItem>
-                <DocsListItem><DocsStrong>Ctrl+Space</DocsStrong>: Trigger IntelliSense</DocsListItem>
-                <DocsListItem><DocsStrong>Shift+Alt+F</DocsStrong> (Shift+Option+F): Format document</DocsListItem>
-            </DocsList>
 
             <DocsHeading level={2}>Example: Setting Up a Project</DocsHeading>
 
