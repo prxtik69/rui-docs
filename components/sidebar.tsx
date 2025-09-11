@@ -239,7 +239,7 @@ export function MobileSidebar() {
                                 height={32}
                                 className="h-8 w-8"
                             />
-                            <span className="text-2xl font-black text-black">RUI</span>
+                            <span className="text-2xl font-black text-black">Rui</span>
                         </Link>
                         <SheetClose asChild>
                             <Button variant="ghost" size="icon" className="h-10 w-10 border-2 border-black bg-red-400 text-black hover:bg-red-500">
