@@ -9,7 +9,7 @@ import {
 export default function RecentAdditionsPage() {
     return (
         <DocsContent>
-            <DocsHeading level={1}>Recent Additions</DocsHeading>
+            <DocsHeading level={1}>Recent Additions </DocsHeading>
 
             <DocsParagraph>
                 Rui has been continuously evolving with new features and improvements. This section highlights the latest additions that make Rui more powerful and user-friendly than ever before.

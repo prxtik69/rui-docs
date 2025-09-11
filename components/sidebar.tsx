@@ -16,7 +16,8 @@ import {
     FileCode,
     Heart,
     Menu,
-    X
+    X,
+    GitBranch
 } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 
@@ -136,6 +137,16 @@ const navigation = [
             },
         ],
     },
+    {
+        title: "Releases",
+        items: [
+            {
+                title: "Releases & Changelog",
+                href: "/docs/releases",
+                icon: GitBranch,
+            },
+        ],
+    },
 ]
 
 interface SidebarProps {
@@ -191,7 +202,7 @@ export function Sidebar({ className }: SidebarProps) {
                             height={32}
                             className="h-8 w-8"
                         />
-                        <span className="text-2xl font-black text-black">RUI</span>
+                        <span className="text-2xl font-black text-black">Rui</span>
                     </Link>
                 </div>
                 <SidebarContent />
