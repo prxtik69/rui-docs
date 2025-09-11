@@ -92,8 +92,8 @@ const navigation: Array<{
                     badge: "NEW",
                 },
                 {
-                    title: "String Manipulation",
-                    href: "/docs/string-manipulation",
+                    title: "Strings",
+                    href: "/docs/strings",
                     icon: FileCode,
                     badge: "NEW",
                 },
