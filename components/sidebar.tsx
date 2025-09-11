@@ -40,6 +40,11 @@ const navigation = [
         title: "Language Basics",
         items: [
             {
+                title: "Data Types",
+                href: "/docs/data-types",
+                icon: Code,
+            },
+            {
                 title: "Variables",
                 href: "/docs/variables",
                 icon: Code,
@@ -50,23 +55,58 @@ const navigation = [
                 icon: Zap,
             },
             {
-                title: "Conditionals",
-                href: "/docs/conditionals",
-                icon: BookOpen,
-            },
-        ],
-    },
-    {
-        title: "Advanced",
-        items: [
-            {
                 title: "Functions",
                 href: "/docs/functions",
-                icon: Code,
+                icon: BookOpen,
             },
             {
                 title: "Booleans & Logic",
                 href: "/docs/booleans",
+                icon: Heart,
+            },
+            {
+                title: "Conditionals",
+                href: "/docs/conditionals",
+                icon: FileCode,
+            },
+        ],
+    },
+    {
+        title: "Data Structures",
+        items: [
+            {
+                title: "Arrays & Objects",
+                href: "/docs/data-structures",
+                icon: Code,
+            },
+            {
+                title: "String Manipulation",
+                href: "/docs/string-manipulation",
+                icon: FileCode,
+            },
+            {
+                title: "Built-in Functions",
+                href: "/docs/built-in-functions",
+                icon: Zap,
+            },
+        ],
+    },
+    {
+        title: "Advanced Topics",
+        items: [
+            {
+                title: "Error Handling",
+                href: "/docs/error-handling",
+                icon: Heart,
+            },
+            {
+                title: "Examples",
+                href: "/docs/examples",
+                icon: BookOpen,
+            },
+            {
+                title: "Recent Additions",
+                href: "/docs/recent-additions",
                 icon: Zap,
             },
         ],
@@ -106,11 +146,11 @@ function SidebarContent() {
     const pathname = usePathname()
 
     return (
-        <div className="px-3 py-4">
-            <div className="space-y-1">
+        <div className="px-4 py-6">
+            <div className="space-y-6">
                 {navigation.map((section) => (
-                    <div key={section.title} className="space-y-1">
-                        <h4 className="px-2 text-xs font-medium text-muted-foreground">
+                    <div key={section.title} className="space-y-3">
+                        <h4 className="px-3 py-2 text-xs font-black text-black uppercase tracking-wider bg-yellow-200 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                             {section.title}
                         </h4>
                         {section.items.map((item) => {
@@ -120,11 +160,13 @@ function SidebarContent() {
                                     key={item.href}
                                     href={item.href}
                                     className={cn(
-                                        "flex items-center space-x-2 rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
-                                        isActive && "bg-accent text-accent-foreground"
+                                        "flex items-center space-x-3 px-3 py-2 text-sm font-bold transition-all duration-150 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]",
+                                        isActive
+                                            ? "bg-green-400 text-black"
+                                            : "bg-white text-black hover:bg-yellow-200"
                                     )}
                                 >
-                                    <item.icon className="h-4 w-4" />
+                                    <item.icon className="h-5 w-5" />
                                     <span>{item.title}</span>
                                 </Link>
                             )
@@ -139,9 +181,9 @@ function SidebarContent() {
 export function Sidebar({ className }: SidebarProps) {
     return (
         <div className={cn("pb-12", className)}>
-            <div className="space-y-4 py-4">
-                <div className="px-3 py-2">
-                    <Link href="/" className="flex items-center space-x-2">
+            <div className="space-y-6 py-6">
+                <div className="px-4 py-4 border-b-4 border-black">
+                    <Link href="/" className="flex items-center space-x-3">
                         <Image
                             src="/logo.svg"
                             alt="Rui Logo"
@@ -149,7 +191,7 @@ export function Sidebar({ className }: SidebarProps) {
                             height={32}
                             className="h-8 w-8"
                         />
-                        <span className="text-lg font-semibold">Rui</span>
+                        <span className="text-2xl font-black text-black">RUI</span>
                     </Link>
                 </div>
                 <SidebarContent />
@@ -170,15 +212,15 @@ export function MobileSidebar() {
     return (
         <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="md:hidden border-2 border-black bg-yellow-400 text-black hover:bg-yellow-500 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Toggle sidebar</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="p-0 w-80 max-w-[85vw]">
+            <SheetContent side="left" className="p-0 w-80 max-w-[85vw] bg-white border-r-4 border-black">
                 <div className="flex h-full flex-col">
-                    <div className="flex items-center justify-between p-4">
-                        <Link href="/" className="flex items-center space-x-2">
+                    <div className="flex items-center justify-between p-6 border-b-4 border-black">
+                        <Link href="/" className="flex items-center space-x-3">
                             <Image
                                 src="/logo.svg"
                                 alt="Rui Logo"
@@ -186,11 +228,11 @@ export function MobileSidebar() {
                                 height={32}
                                 className="h-8 w-8"
                             />
-                            <span className="text-lg font-semibold">Rui</span>
+                            <span className="text-2xl font-black text-black">RUI</span>
                         </Link>
                         <SheetClose asChild>
-                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                                <X className="h-4 w-4" />
+                            <Button variant="ghost" size="icon" className="h-10 w-10 border-2 border-black bg-red-400 text-black hover:bg-red-500">
+                                <X className="h-5 w-5" />
                                 <span className="sr-only">Close sidebar</span>
                             </Button>
                         </SheetClose>

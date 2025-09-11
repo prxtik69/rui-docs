@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    },
+    "neobrutalism-components Docs": {
+      "url": "https://gitmcp.io/ekmas/neobrutalism-components"
+    }
+  }
+}

@@ -7,7 +7,6 @@ import {
     DocsList,
     DocsListItem,
     DocsLink,
-    DocsStrong
 } from "@/components/docs-content"
 
 export default function CLIPage() {
