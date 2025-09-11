@@ -1,8 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Zap, Terminal, FileCode } from "lucide-react"
 
 export default function Home() {
