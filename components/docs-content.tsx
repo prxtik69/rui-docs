@@ -27,7 +27,7 @@ export const CodeBlock = ({ children, className }: { children: React.ReactNode; 
         if (typeof children === 'string') {
             text = children
         } else if (React.isValidElement(children) && children.props) {
-            const props = children.props as any
+            const props = children.props as { children?: React.ReactNode }
             if (props.children) {
                 text = String(props.children)
             } else {
