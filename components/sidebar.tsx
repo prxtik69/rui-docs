@@ -21,133 +21,145 @@ import {
 } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 
-const navigation = [
-    {
-        title: "Getting Started",
-        items: [
-            {
-                title: "Installation",
-                href: "/docs/installation",
-                icon: Settings,
-            },
-            {
-                title: "Hello World",
-                href: "/docs/hello-world",
-                icon: Play,
-            },
-        ],
-    },
-    {
-        title: "Language Basics",
-        items: [
-            {
-                title: "Data Types",
-                href: "/docs/data-types",
-                icon: Code,
-            },
-            {
-                title: "Variables",
-                href: "/docs/variables",
-                icon: Code,
-            },
-            {
-                title: "Operators",
-                href: "/docs/operators",
-                icon: Zap,
-            },
-            {
-                title: "Functions",
-                href: "/docs/functions",
-                icon: BookOpen,
-            },
-            {
-                title: "Booleans & Logic",
-                href: "/docs/booleans",
-                icon: Heart,
-            },
-            {
-                title: "Conditionals",
-                href: "/docs/conditionals",
-                icon: FileCode,
-            },
-        ],
-    },
-    {
-        title: "Data Structures",
-        items: [
-            {
-                title: "Arrays & Objects",
-                href: "/docs/data-structures",
-                icon: Code,
-            },
-            {
-                title: "String Manipulation",
-                href: "/docs/string-manipulation",
-                icon: FileCode,
-            },
-            {
-                title: "Built-in Functions",
-                href: "/docs/built-in-functions",
-                icon: Zap,
-            },
-        ],
-    },
-    {
-        title: "Advanced Topics",
-        items: [
-            {
-                title: "Error Handling",
-                href: "/docs/error-handling",
-                icon: Heart,
-            },
-            {
-                title: "Examples",
-                href: "/docs/examples",
-                icon: BookOpen,
-            },
-            {
-                title: "Recent Additions",
-                href: "/docs/recent-additions",
-                icon: Zap,
-            },
-        ],
-    },
-    {
-        title: "Tools",
-        items: [
-            {
-                title: "CLI Usage",
-                href: "/docs/cli",
-                icon: Terminal,
-            },
-            {
-                title: "VS Code Integration",
-                href: "/docs/vscode",
-                icon: FileCode,
-            },
-        ],
-    },
-    {
-        title: "Community",
-        items: [
-            {
-                title: "Contributing",
-                href: "/docs/contributing",
-                icon: Heart,
-            },
-        ],
-    },
-    {
-        title: "Releases",
-        items: [
-            {
-                title: "Releases & Changelog",
-                href: "/docs/releases",
-                icon: GitBranch,
-            },
-        ],
-    },
-]
+interface NavigationItem {
+    title: string
+    href: string
+    icon: React.ComponentType<{ className?: string }>
+    badge?: string
+}
+
+const navigation: Array<{
+    title: string
+    items: NavigationItem[]
+}> = [
+        {
+            title: "Getting Started",
+            items: [
+                {
+                    title: "Installation",
+                    href: "/docs/installation",
+                    icon: Settings,
+                },
+                {
+                    title: "Hello World",
+                    href: "/docs/hello-world",
+                    icon: Play,
+                },
+            ],
+        },
+        {
+            title: "Language Basics",
+            items: [
+                {
+                    title: "Data Types",
+                    href: "/docs/data-types",
+                    icon: Code,
+                },
+                {
+                    title: "Variables",
+                    href: "/docs/variables",
+                    icon: Code,
+                },
+                {
+                    title: "Operators",
+                    href: "/docs/operators",
+                    icon: Zap,
+                },
+                {
+                    title: "Functions",
+                    href: "/docs/functions",
+                    icon: BookOpen,
+                },
+                {
+                    title: "Booleans & Logic",
+                    href: "/docs/booleans",
+                    icon: Heart,
+                },
+                {
+                    title: "Conditionals",
+                    href: "/docs/conditionals",
+                    icon: FileCode,
+                },
+            ],
+        },
+        {
+            title: "Data Structures",
+            items: [
+                {
+                    title: "Arrays & Objects",
+                    href: "/docs/data-structures",
+                    icon: Code,
+                    badge: "NEW",
+                },
+                {
+                    title: "String Manipulation",
+                    href: "/docs/string-manipulation",
+                    icon: FileCode,
+                    badge: "NEW",
+                },
+                {
+                    title: "Built-in Functions",
+                    href: "/docs/built-in-functions",
+                    icon: Zap,
+                },
+            ],
+        },
+        {
+            title: "Advanced Topics",
+            items: [
+                {
+                    title: "Error Handling",
+                    href: "/docs/error-handling",
+                    icon: Heart,
+                },
+                {
+                    title: "Examples",
+                    href: "/docs/examples",
+                    icon: BookOpen,
+                },
+                {
+                    title: "Recent Additions",
+                    href: "/docs/recent-additions",
+                    icon: Zap,
+                },
+            ],
+        },
+        {
+            title: "Tools",
+            items: [
+                {
+                    title: "CLI Usage",
+                    href: "/docs/cli",
+                    icon: Terminal,
+                },
+                {
+                    title: "VS Code Integration",
+                    href: "/docs/vscode",
+                    icon: FileCode,
+                },
+            ],
+        },
+        {
+            title: "Community",
+            items: [
+                {
+                    title: "Contributing",
+                    href: "/docs/contributing",
+                    icon: Heart,
+                },
+            ],
+        },
+        {
+            title: "Releases",
+            items: [
+                {
+                    title: "Releases & Changelog",
+                    href: "/docs/releases",
+                    icon: GitBranch,
+                },
+            ],
+        },
+    ]
 
 interface SidebarProps {
     className?: string
@@ -171,14 +183,21 @@ function SidebarContent() {
                                     key={item.href}
                                     href={item.href}
                                     className={cn(
-                                        "flex items-center space-x-3 px-3 py-2 text-sm font-bold transition-all duration-150 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]",
+                                        "flex items-center justify-between px-3 py-2 text-sm font-bold transition-all duration-150 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]",
                                         isActive
                                             ? "bg-green-400 text-black"
                                             : "bg-white text-black hover:bg-yellow-200"
                                     )}
                                 >
-                                    <item.icon className="h-5 w-5" />
-                                    <span>{item.title}</span>
+                                    <div className="flex items-center space-x-3">
+                                        <item.icon className="h-5 w-5" />
+                                        <span>{item.title}</span>
+                                    </div>
+                                    {item.badge && (
+                                        <span className="px-2 py-1 text-xs font-black text-white bg-red-500 border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wider">
+                                            {item.badge}
+                                        </span>
+                                    )}
                                 </Link>
                             )
                         })}
