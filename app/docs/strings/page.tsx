@@ -7,7 +7,6 @@ import {
     DocsList,
     DocsListItem,
     DocsStrong,
-    DocsLink
 } from "@/components/docs-content"
 
 export default function StringsPage() {
@@ -138,7 +137,7 @@ write("Length: ", length(text))          // 5`}
             <DocsHeading level={2}>Advanced String Processing</DocsHeading>
 
             <DocsParagraph>
-                Here's a practical example of text processing using string methods:
+                Here&apos;s a practical example of text processing using string methods:
             </DocsParagraph>
 
             <CodeBlock>
