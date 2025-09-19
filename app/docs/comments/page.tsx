@@ -21,7 +21,7 @@ export default function CommentsPage() {
             <DocsHeading level={2}>Single-line Comments</DocsHeading>
 
             <DocsParagraph>
-                Single-line comments start with <InlineCode>//</InlineCode> and continue until the end of the line:
+                Single-line comments start with <InlineCode>{'//'}</InlineCode> and continue until the end of the line:
             </DocsParagraph>
 
             <CodeBlock>
@@ -48,7 +48,7 @@ suppose age = 25  // Age of the person`}
             <DocsHeading level={2}>Multiline Comments</DocsHeading>
 
             <DocsParagraph>
-                Multiline comments start with <InlineCode>/*</InlineCode> and end with <InlineCode>*/</InlineCode>:
+                Multiline comments start with <InlineCode>{'/*'}</InlineCode> and end with <InlineCode>{'*/'}</InlineCode>:
             </DocsParagraph>
 
             <CodeBlock>
