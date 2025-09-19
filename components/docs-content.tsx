@@ -37,6 +37,19 @@ export const CodeBlock = ({ children, className }: { children: React.ReactNode; 
             text = String(children)
         }
 
+        // Clean up JSX artifacts and HTML entities
+        text = text
+            .replace(/\{\'\\n\'\}/g, '\n')
+            .replace(/\{\"\\n\"\}/g, '\n')
+            .replace(/\\n/g, '\n')
+            .replace(/\{.*?\}/g, '')
+            .replace(/&quot;/g, '"')
+            .replace(/&apos;/g, "'")
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .trim()
+
         try {
             await navigator.clipboard.writeText(text)
             setCopied(true)

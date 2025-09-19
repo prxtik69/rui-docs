@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Zap, Terminal, FileCode } from "lucide-react"
+import { Zap, Terminal, FileCode, Rocket } from "lucide-react"
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="mx-auto max-w-5xl text-center">
             <Link href="/docs/recent-additions">
               <div className="mb-4 sm:mb-6 px-4 py-2 text-xs sm:text-sm font-black text-black uppercase tracking-wider bg-green-400 border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] inline-block">
-                🚀 NEW RELEASE! v1.0.7 IS HERE! 🎉
+                <Rocket className="inline h-5 w-5" /> NEW RELEASE! v1.0.9 IS HERE! 
               </div></Link>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight mb-6 sm:mb-8 leading-tight text-black">
               Welcome to{" "}

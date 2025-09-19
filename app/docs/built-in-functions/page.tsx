@@ -7,6 +7,7 @@ import {
     DocsListItem,
     DocsLink,
     DocsStrong,
+    InlineCode,
 } from "@/components/docs-content"
 
 export default function BuiltInFunctionsPage() {
@@ -20,65 +21,131 @@ export default function BuiltInFunctionsPage() {
                 available without needing to import anything.
             </DocsParagraph>
 
-            <DocsHeading level={2}>General Functions</DocsHeading>
+            <DocsHeading level={2}>Output Functions</DocsHeading>
 
             <DocsParagraph>
-                These functions work with any data type and provide fundamental
-                operations:
+                The <InlineCode>write()</InlineCode> function is the primary way to display output in Rui:
             </DocsParagraph>
 
-            <DocsHeading level={3}>write(...args)</DocsHeading>
+            <CodeBlock>
+                {`write("Hello, World!")
+write("Multiple", "arguments", "supported")
+write("Name: " + name)
+write("Age: " + age)`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>Type Checking</DocsHeading>
 
             <DocsParagraph>
-                The most important function in Rui — prints multiple values to the
-                console:
+                Use the <InlineCode>type()</InlineCode> function to check the type of any value:
             </DocsParagraph>
 
-            <CodeBlock>{`// Print single values
-  write("Hello World")
-  write(42)
-  write(true)
-  
-  // Print multiple values
-  write("Name:", "Alice", "Age:", 25)
-  write("Numbers:", 1, 2, 3, 4, 5)
-  
-  // Print variables
-  suppose name = "Bob"
-  suppose age = 30
-  write("Hello", name, "you are", age, "years old")
-  
-  // Print arrays and objects
-  suppose numbers = [1, 2, 3]
-  suppose person = { name: "Charlie", age: 35 }
-  write("Array:", numbers)
-  write("Object:", person)`}</CodeBlock>
+            <CodeBlock>
+                {`suppose str = "Hello"
+suppose num = 42
+suppose arr = [1, 2, 3]
+suppose obj = {name: "Alice"}
 
-            <DocsHeading level={3}>length(value)</DocsHeading>
+write("String type: " + type(str))  // string
+write("Number type: " + type(num))  // number
+write("Array type: " + type(arr))   // array
+write("Object type: " + type(obj))  // object`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>String Functions</DocsHeading>
 
             <DocsParagraph>
-                Returns the length of strings, arrays, or other collections:
+                Rui provides several built-in string manipulation functions:
             </DocsParagraph>
 
-            <CodeBlock>{`// String length
-  suppose text = "Hello World"
-  write("String length:", length(text))  // 11
-  
-  // Array length
-  suppose numbers = [1, 2, 3, 4, 5]
-  write("Array length:", length(numbers))  // 5
-  
-  // Empty collections
-  suppose empty = ""
-  suppose emptyArray = []
-  write("Empty string length:", length(empty))  // 0
-  write("Empty array length:", length(emptyArray))  // 0
-  
-  // Practical use
-  suppose fruits = ["apple", "banana", "orange"]
-  write("You have", length(fruits), "fruits")`}</CodeBlock>
+            <CodeBlock>
+                {`suppose text = "Hello World"
 
-            {/* …repeat this cleaned format for the rest of your sections … */}
+write("Original: " + text)
+write("Upper: " + text.upper())     // HELLO WORLD
+write("Lower: " + text.lower())     // hello world
+write("Split: " + text.split(" "))  // ["Hello", "World"]`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>Array Functions</DocsHeading>
+
+            <DocsParagraph>
+                Arrays come with built-in methods for manipulation:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`suppose arr = [1, 2, 3]
+
+// Add elements
+arr.push(4)
+write("After push: " + arr)  // [1, 2, 3, 4]
+
+// Remove last element
+write("Pop result: " + arr.pop())  // 4
+write("After pop: " + arr)        // [1, 2, 3]
+
+// Add to beginning
+arr.unshift(0)
+write("After unshift: " + arr)    // [0, 1, 2, 3]
+
+// Remove from beginning
+write("Shift result: " + arr.shift()) // 0
+write("After shift: " + arr)          // [1, 2, 3]`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>Utility Functions</DocsHeading>
+
+            <DocsParagraph>
+                Rui provides utility functions for common operations:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`suppose str = "123"
+suppose arr = ["a", "b", "c"]
+
+write("Parse int: " + parseInt(str))        // 123
+write("Parse float: " + parseFloat("3.14")) // 3.14
+write("Join array: " + join(arr, "-"))      // a-b-c
+write("Length: " + length(arr))             // 3`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>Array Indexing and Slicing</DocsHeading>
+
+            <DocsParagraph>
+                Access and manipulate array elements with indexing and slicing:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`suppose arr = [10, 20, 30, 40, 50]
+
+write("First element: " + arr[0])    // 10
+write("Last element: " + arr[-1])    // 50
+write("Middle element: " + arr[2])  // 30
+
+// Slicing
+write("Slice [1:4]: " + arr[1:4])   // [20, 30, 40]
+write("Slice [:3]: " + arr[:3])     // [10, 20, 30]
+write("Slice [2:]: " + arr[2:])     // [30, 40, 50]`}
+            </CodeBlock>
+
+            <DocsHeading level={2}>Object Property Access</DocsHeading>
+
+            <DocsParagraph>
+                Access object properties using dot notation:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`suppose person = {
+    name: "Alice",
+    age: 25,
+    city: "New York"
+}
+
+write("Person: " + person)
+write("Name: " + person.name)
+write("Age: " + person.age)
+write("City: " + person.city)`}
+            </CodeBlock>
 
             <DocsHeading level={2}>Best Practices</DocsHeading>
 

@@ -26,7 +26,8 @@ export default function InstallationPage() {
             </DocsParagraph>
 
             <CodeBlock>
-                node --version{'\n'}npm --version
+                {`node --version
+npm --version`}
             </CodeBlock>
 
             <DocsParagraph>

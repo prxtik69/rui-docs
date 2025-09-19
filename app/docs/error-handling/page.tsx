@@ -19,6 +19,37 @@ export default function ErrorHandlingPage() {
                 encounter them.
             </DocsParagraph>
 
+            <DocsHeading level={2}>Variable Name Errors</DocsHeading>
+            <DocsParagraph>
+                Rui has specific rules for variable names. These errors occur when you violate naming conventions:
+            </DocsParagraph>
+            <CodeBlock>{`// These will cause clear error messages:
+
+// suppose 123name = "invalid"     // Error: variable names cannot start with a number
+// suppose first-name = "invalid"  // Error: variable names cannot contain hyphens
+// suppose if = "invalid"         // Error: 'if' is a reserved word
+
+// Valid variable names
+suppose validName = "Hello"
+suppose name123 = "World"
+suppose _private = "Private"
+suppose snake_case = "Snake"`}</CodeBlock>
+
+            <DocsHeading level={2}>Type Errors</DocsHeading>
+            <DocsParagraph>
+                Type errors occur when you try to perform operations on incompatible data types:
+            </DocsParagraph>
+            <CodeBlock>{`suppose str = "hello"
+suppose num = 42
+
+// These will cause runtime errors:
+// write(str + num)  // Works due to automatic conversion
+// write(str - num)  // Error: cannot subtract number from string
+
+// Valid operations
+write(str + " " + num)  // "hello 42"
+write(num + 10)         // 52`}</CodeBlock>
+
             <DocsHeading level={2}>Syntax Errors</DocsHeading>
             <DocsParagraph>
                 Syntax errors occur when the code does not follow the correct structure
@@ -28,9 +59,6 @@ export default function ErrorHandlingPage() {
   define greet(name) {
       write("Hello, " + name + "!")
   }  // Missing closing brace
-  
-  // Invalid variable name
-  suppose 123invalid = "error"  // Cannot start with number
   
   // Missing operator
   suppose result = 5 3  // Missing operator between 5 and 3

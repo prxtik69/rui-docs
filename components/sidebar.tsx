@@ -17,7 +17,25 @@ import {
     Heart,
     Menu,
     X,
-    GitBranch
+    GitBranch,
+    Download,
+    Rocket,
+    Type,
+    Variable,
+    Calculator,
+    Layers,
+    ToggleLeft,
+    MessageSquare,
+    Database,
+    Hash,
+    Wrench,
+    AlertTriangle,
+    Lightbulb,
+    Sparkles,
+    Monitor,
+    Users,
+    GitCommit,
+    CheckSquare,
 } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 
@@ -38,12 +56,17 @@ const navigation: Array<{
                 {
                     title: "Installation",
                     href: "/docs/installation",
-                    icon: Settings,
+                    icon: Download,
                 },
                 {
                     title: "Hello World",
                     href: "/docs/hello-world",
-                    icon: Play,
+                    icon: Rocket,
+                },
+                {
+                    title: "Getting Started",
+                    href: "/docs/getting-started",
+                    icon: BookOpen,
                 },
             ],
         },
@@ -51,34 +74,44 @@ const navigation: Array<{
             title: "Language Basics",
             items: [
                 {
+                    title: "Language Basics",
+                    href: "/docs/language-basics",
+                    icon: Code,
+                },
+                {
                     title: "Data Types",
                     href: "/docs/data-types",
-                    icon: Code,
+                    icon: Type,
                 },
                 {
                     title: "Variables",
                     href: "/docs/variables",
-                    icon: Code,
+                    icon: Variable,
                 },
                 {
                     title: "Operators",
                     href: "/docs/operators",
-                    icon: Zap,
+                    icon: Calculator,
                 },
                 {
                     title: "Functions",
                     href: "/docs/functions",
-                    icon: BookOpen,
+                    icon: Layers,
                 },
                 {
                     title: "Booleans & Logic",
                     href: "/docs/booleans",
-                    icon: Heart,
+                    icon: ToggleLeft,
                 },
                 {
                     title: "Conditionals",
                     href: "/docs/conditionals",
-                    icon: FileCode,
+                    icon: CheckSquare,
+                },
+                {
+                    title: "Comments",
+                    href: "/docs/comments",
+                    icon: MessageSquare,
                 },
             ],
         },
@@ -88,19 +121,17 @@ const navigation: Array<{
                 {
                     title: "Arrays & Objects",
                     href: "/docs/data-structures",
-                    icon: Code,
-                    badge: "NEW",
+                    icon: Database,
                 },
                 {
                     title: "Strings",
                     href: "/docs/strings",
-                    icon: FileCode,
-                    badge: "NEW",
+                    icon: Hash,
                 },
                 {
                     title: "Built-in Functions",
                     href: "/docs/built-in-functions",
-                    icon: Zap,
+                    icon: Wrench,
                 },
             ],
         },
@@ -108,19 +139,19 @@ const navigation: Array<{
             title: "Advanced Topics",
             items: [
                 {
-                    title: "Error Handling",
-                    href: "/docs/error-handling",
-                    icon: Heart,
+                    title: "Errors",
+                    href: "/docs/errors",
+                    icon: AlertTriangle,
                 },
                 {
                     title: "Examples",
                     href: "/docs/examples",
-                    icon: BookOpen,
+                    icon: Lightbulb,
                 },
                 {
                     title: "Recent Additions",
                     href: "/docs/recent-additions",
-                    icon: Zap,
+                    icon: Sparkles,
                 },
             ],
         },
@@ -135,7 +166,7 @@ const navigation: Array<{
                 {
                     title: "VS Code Integration",
                     href: "/docs/vscode",
-                    icon: FileCode,
+                    icon: Monitor,
                 },
             ],
         },
@@ -145,7 +176,7 @@ const navigation: Array<{
                 {
                     title: "Contributing",
                     href: "/docs/contributing",
-                    icon: Heart,
+                    icon: Users,
                 },
             ],
         },
@@ -155,7 +186,7 @@ const navigation: Array<{
                 {
                     title: "Releases & Changelog",
                     href: "/docs/releases",
-                    icon: GitBranch,
+                    icon: GitCommit,
                 },
             ],
         },

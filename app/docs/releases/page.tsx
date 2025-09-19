@@ -20,10 +20,49 @@ export default function ReleasesPage() {
                 new features, bug fixes, and improvements made to the language.
             </DocsParagraph>
 
-            <DocsHeading level={2}>Latest Release: v1.0.7</DocsHeading>
+            <DocsHeading level={2}>Latest Release: v1.0.9</DocsHeading>
 
             <DocsParagraph>
-                <DocsStrong>Release Date: 11 September 2025</DocsStrong>
+                <DocsStrong>Release Date: 19 September 2025</DocsStrong>
+            </DocsParagraph>
+
+            <DocsHeading level={3}><Sparkles className="inline h-5 w-5 mr-2" />New Features</DocsHeading>
+
+            <DocsList>
+                <DocsListItem><DocsStrong>Type Checking Function:</DocsStrong> Added <InlineCode>type()</InlineCode> function to get the type of any variable at runtime</DocsListItem>
+                <DocsListItem><DocsStrong>Enhanced Debugging:</DocsStrong> Better runtime type information for debugging and dynamic programming</DocsListItem>
+            </DocsList>
+
+            <DocsHeading level={3}><Bug className="inline h-5 w-5 mr-2" />Bug Fixes</DocsHeading>
+
+            <DocsList>
+                <DocsListItem>Fixed bugs reported by users in array operations</DocsListItem>
+                <DocsListItem>Improved error handling for edge cases</DocsListItem>
+                <DocsListItem>Fixed memory leaks in long-running programs</DocsListItem>
+                <DocsListItem>Resolved issues with nested function calls</DocsListItem>
+                <DocsListItem>Enhanced string manipulation functions</DocsListItem>
+                <DocsListItem>Improved performance for large data structures</DocsListItem>
+            </DocsList>
+
+            <DocsHeading level={2}>v1.0.8   </DocsHeading>
+
+            <DocsParagraph>
+                <DocsStrong>Release Date: September 2025</DocsStrong>
+            </DocsParagraph>
+
+            <DocsHeading level={3}><Sparkles className="inline h-5 w-5 mr-2" />Changes Made</DocsHeading>
+
+
+            <DocsList>
+                <DocsListItem>Fixed Few Bugs in the language</DocsListItem>
+            </DocsList>
+
+
+
+            <DocsHeading level={2}>v1.0.7</DocsHeading>
+
+            <DocsParagraph>
+                <DocsStrong>Release Date: September 2025</DocsStrong>
             </DocsParagraph>
 
             <DocsHeading level={3}><Sparkles className="inline h-5 w-5 mr-2" />New Features</DocsHeading>
@@ -139,7 +178,7 @@ export default function ReleasesPage() {
             <DocsHeading level={2}>v1.0.0</DocsHeading>
 
             <DocsParagraph>
-                <DocsStrong>Release Date: June 2025</DocsStrong>
+                <DocsStrong>Release Date: August 2025</DocsStrong>
             </DocsParagraph>
 
             <DocsHeading level={3}><Sparkles className="inline h-5 w-5 mr-2" />Initial Release</DocsHeading>
@@ -147,7 +186,6 @@ export default function ReleasesPage() {
             <DocsList>
                 <DocsListItem><DocsStrong>Project Launch:</DocsStrong> Rui programming language officially launched</DocsListItem>
                 <DocsListItem><DocsStrong>Core Vision:</DocsStrong> Beginner-friendly programming language inspired by JavaScript</DocsListItem>
-                <DocsListItem><DocsStrong>Community:</DocsStrong> Open source project with community contributions welcome</DocsListItem>
             </DocsList>
 
             <DocsHeading level={2}>Upcoming Features</DocsHeading>
@@ -165,7 +203,7 @@ export default function ReleasesPage() {
             <DocsHeading level={2}>Contributing</DocsHeading>
 
             <DocsParagraph>
-                Want to help shape the future of Rui? Check out our <DocsLink href="/docs/contributing">Contributing Guide</DocsLink>
+                Want to help shape the future of Rui? Check out our <DocsLink href="/docs/contributing">Contributing Guide </DocsLink>
                 to learn how you can get involved in the development process.
             </DocsParagraph>
 

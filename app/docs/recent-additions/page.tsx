@@ -4,18 +4,58 @@ import {
     DocsParagraph,
     CodeBlock,
     InlineCode,
+    DocsList,
+    DocsListItem,
 } from "@/components/docs-content"
 
 export default function RecentAdditionsPage() {
     return (
         <DocsContent>
-            <DocsHeading level={1}>Recent Additions </DocsHeading>
+            <DocsHeading level={1}>Recent Additions - v1.0.9</DocsHeading>
 
             <DocsParagraph>
                 Rui has been continuously evolving with new features and improvements. This section highlights the latest additions that make Rui more powerful and user-friendly than ever before.
             </DocsParagraph>
 
-            <DocsHeading level={2}>Data Structures (Arrays & Objects)</DocsHeading>
+            <DocsHeading level={2}>New Features in v1.0.9</DocsHeading>
+
+            <DocsHeading level={3}>Type Checking Function</DocsHeading>
+
+            <DocsParagraph>
+                Added the <InlineCode>type()</InlineCode> function to get the type of any variable at runtime:
+            </DocsParagraph>
+
+            <CodeBlock>{`suppose str = "Hello"
+suppose num = 42
+suppose arr = [1, 2, 3]
+suppose obj = {name: "Alice"}
+
+write("String type: " + type(str))  // string
+write("Number type: " + type(num))  // number
+write("Array type: " + type(arr))   // array
+write("Object type: " + type(obj))  // object`}</CodeBlock>
+
+            <DocsParagraph>
+                This function is particularly useful for debugging and creating dynamic programs that need to handle different data types.
+            </DocsParagraph>
+
+            <DocsHeading level={3}>Bug Fixes</DocsHeading>
+
+            <DocsParagraph>
+                Fixed several bugs reported by users:
+            </DocsParagraph>
+
+            <DocsList>
+                <DocsListItem>Improved error handling for edge cases in array operations</DocsListItem>
+                <DocsListItem>Fixed memory leaks in long-running programs</DocsListItem>
+                <DocsListItem>Resolved issues with nested function calls</DocsListItem>
+                <DocsListItem>Enhanced string manipulation functions</DocsListItem>
+                <DocsListItem>Improved performance for large data structures</DocsListItem>
+            </DocsList>
+
+            <DocsHeading level={2}>Previous Additions</DocsHeading>
+
+            <DocsHeading level={3}>Data Structures (Arrays & Objects)</DocsHeading>
 
             <DocsParagraph>
                 Major enhancements to data structure support have been added:

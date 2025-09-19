@@ -26,7 +26,9 @@ export default function FunctionsPage() {
             </DocsParagraph>
 
             <CodeBlock>
-                define greet(name) {'{'}{'\n'}    write(&quot;Hello, &quot; + name + &quot;!&quot;){'\n'}{'}'}
+                {`define greet(name) {
+    write("Hello, " + name + "!")
+}`}
             </CodeBlock>
 
             <DocsHeading level={2}>Calling Functions</DocsHeading>
@@ -119,6 +121,49 @@ export default function FunctionsPage() {
                 define celsiusToFahrenheit(celsius) {'{'}{'\n'}    suppose fahrenheit = (celsius * 9 / 5) + 32{'\n'}    return fahrenheit{'\n'}{'}'}{'\n'}{'\n'}define fahrenheitToCelsius(fahrenheit) {'{'}{'\n'}    suppose celsius = (fahrenheit - 32) * 5 / 9{'\n'}    return celsius{'\n'}{'}'}{'\n'}{'\n'}{`{/* Convert temperatures */}`}{'\n'}suppose celsius = 25{'\n'}suppose fahrenheit = celsiusToFahrenheit(celsius){'\n'}write(celsius + &quot;°C = &quot; + fahrenheit + &quot;°F&quot;){'\n'}{'\n'}suppose fahrenheit = 77{'\n'}suppose celsius = fahrenheitToCelsius(fahrenheit){'\n'}write(fahrenheit + &quot;°F = &quot; + celsius + &quot;°C&quot;)
             </CodeBlock>
 
+            <DocsHeading level={2}>Recursive Functions</DocsHeading>
+
+            <DocsParagraph>
+                Functions can call themselves, which is called recursion. This is useful for solving problems that can be broken down into smaller, similar problems:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`define factorial(n) {
+    if (n <= 1) {
+        return 1
+    } else {
+        return n * factorial(n - 1)
+    }
+}
+
+write("Factorial of 5: " + factorial(5))  // 120`}
+            </CodeBlock>
+
+            <DocsParagraph>
+                Here&apos;s another recursive example - calculating Fibonacci numbers:
+            </DocsParagraph>
+
+            <CodeBlock>
+                {`define fibonacci(n) {
+    if (n <= 1) {
+        return n
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+write("Fibonacci sequence:")
+suppose i = 0
+until (i < 10) {
+    write("F(" + i + ") = " + fibonacci(i))
+    suppose i = i + 1
+}`}
+            </CodeBlock>
+
+            <DocsParagraph>
+                <DocsStrong>Important:</DocsStrong> Recursive functions need a base case (stopping condition) to prevent infinite recursion.
+            </DocsParagraph>
+
             <DocsHeading level={2}>Function Best Practices</DocsHeading>
 
             <DocsList ordered>
@@ -127,6 +172,7 @@ export default function FunctionsPage() {
                 <DocsListItem><DocsStrong>Use parameters</DocsStrong>: Make functions flexible by accepting parameters</DocsListItem>
                 <DocsListItem><DocsStrong>Return values</DocsStrong>: Use return values to provide results</DocsListItem>
                 <DocsListItem><DocsStrong>Document your functions</DocsStrong>: Add comments to explain what functions do</DocsListItem>
+                <DocsListItem><DocsStrong>Handle recursion carefully</DocsStrong>: Always include a base case to prevent infinite recursion</DocsListItem>
             </DocsList>
 
             <CodeBlock>
