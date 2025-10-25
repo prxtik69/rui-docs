@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const neobrutalismBadgeVariants = cva(
-    "inline-flex items-center rounded-none border-2 border-black px-3 py-1 text-xs font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2",
+    "inline-flex items-center rounded-md border-2 border-black px-3 py-1 text-xs font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2",
     {
         variants: {
             variant: {

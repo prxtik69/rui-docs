@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { NeobrutalismBadge } from "@/components/ui/neobrutalism-badge"
 import { Zap, Terminal, FileCode, Rocket } from "lucide-react"
 
 export default function Home() {
@@ -40,16 +41,17 @@ export default function Home() {
       <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
         <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32 lg:py-40">
           <div className="mx-auto max-w-5xl text-center">
-            <Link href="/docs/recent-additions">
-              <div className="mb-4 sm:mb-6 px-4 py-2 text-xs sm:text-sm font-black text-black uppercase tracking-wider bg-green-400 border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] inline-block">
-                <Rocket className="inline h-5 w-5" /> NEW RELEASE! v1.0.9 IS HERE! 
-              </div></Link>
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight mb-6 sm:mb-8 leading-tight text-black">
               Welcome to{" "}
               <span className="bg-green-400 text-black px-2 py-1 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 Rui
               </span>
             </h1>
+            {/* add a chip here saying a project by WeLabs.in */}
+            <NeobrutalismBadge variant="secondary" className="mb-4">
+              <span className="text-sm font-bold">A project by <Link href="https://welabs.in" className="text-black hover:text-green-600 font-black transition-colors">WeLabs.in</Link></span>
+            </NeobrutalismBadge>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               A beginner-friendly, lightweight programming language inspired by JavaScript.
               Perfect for learning programming fundamentals with intuitive and readable syntax.
@@ -232,7 +234,8 @@ rui hello.rui`}</code>
           </div>
           <div className="border-t-2 border-black mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-800 font-bold">
             <p> 2025 Rui. Made with ❤️ by
-              <Link href="https://pratik.social" className="text-black hover:text-green-600 font-black transition-colors"> Pratik</Link>
+              <Link href="https://pratik.social" className="text-black hover:text-green-600 font-black transition-colors"> Pratik </Link>
+              in <Link href="https://welabs.in" className="text-black hover:text-green-600 font-black transition-colors">WeLabs.in</Link>
             </p>
           </div>
         </div>
