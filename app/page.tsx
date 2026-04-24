@@ -234,7 +234,7 @@ rui hello.rui`}</code>
           </div>
           <div className="border-t-2 border-black mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-800 font-bold">
             <p> 2025 Rui. Made with ❤️ by
-              <Link href="https://pratik.social" className="text-black hover:text-green-600 font-black transition-colors"> Pratik </Link>
+              <Link href="https://pratik.welabs.in" className="text-black hover:text-green-600 font-black transition-colors"> Pratik </Link>
               in <Link href="https://welabs.in" className="text-black hover:text-green-600 font-black transition-colors">WeLabs.in</Link>
             </p>
           </div>
