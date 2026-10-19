@@ -48,9 +48,9 @@ export default function Home() {
                 Rui
               </span>
             </h1>
-            {/* add a chip here saying a project by WeLabs.in */}
+            {/* add a chip here saying a project by kurolabs.in */}
             <NeobrutalismBadge variant="secondary" className="mb-4">
-              <span className="text-sm font-bold">A project by <Link href="https://welabs.in" className="text-black hover:text-green-600 font-black transition-colors">WeLabs.in</Link></span>
+              <span className="text-sm font-bold">A project by <Link href="https://kurolabs.in" className="text-black hover:text-green-600 font-black transition-colors">kurolabs.in</Link></span>
             </NeobrutalismBadge>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               A beginner-friendly, lightweight programming language inspired by JavaScript.
@@ -234,8 +234,8 @@ rui hello.rui`}</code>
           </div>
           <div className="border-t-2 border-black mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-800 font-bold">
             <p> 2025 Rui. Made with ❤️ by
-              <Link href="https://pratik.welabs.in" className="text-black hover:text-green-600 font-black transition-colors"> Pratik </Link>
-              in <Link href="https://welabs.in" className="text-black hover:text-green-600 font-black transition-colors">WeLabs.in</Link>
+              <Link href="https://pratik.kurolabs.in" className="text-black hover:text-green-600 font-black transition-colors"> Pratik </Link>
+              in <Link href="https://kurolabs.in" className="text-black hover:text-green-600 font-black transition-colors">kurolabs.in</Link>
             </p>
           </div>
         </div>
